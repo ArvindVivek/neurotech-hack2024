@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Flow</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #graph-container {
+            position: absolute; /* Set position to absolute */
+            top: 200px; /* Adjust top position as needed */
+            right: 25px; /* Adjust left position as needed */
+            width: 80%; /* Set the width of the container */
+            max-width: 800px; /* Set the maximum width of the container */
+        }
+
+        #title-container {
+            position: absolute;
+            top: 150px;
+            left: 250px;
+        }
+
+        #header-container {
+            position: absolute;
+            top: 150px;
+            left: 250px;
+        }
+
+        .box {
+            width: 450px; /* Width of the box */
+            height: 275px; /* Height of the box */
+            background-color: #ffffff; /* Background color of the box */
+            border: 2px solid #121226; /* Border style of the box */
+            padding: 20px; /* Padding inside the box */
+            margin: 20px; /* Margin around the box */
+            position: absolute;
+            top:225px;
+            left:75px;
+
+        }
+
+    </style>
+
+    <style>
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .poppins-bold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .title {
+            text-align: center; /* Center-align the text */
+        }
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="graph-container">
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+
+    <h1 class="poppins-bold title" style="font-size: 50px">
+            SIMPLE FLOW
+    </h1>
+
+    <h2 class="poppins-semibold" id="title-container">
+
+        STUDENTS: &nbsp 1
+    </h2>
+
+    <h2>
+
+    </h2>
+
+
+    <script>
+
+        let list_y = [1, 2, 3, 4];
+        let timeStamps = [1,2,3,4];
+
+        let sample_data = {
+
+            "Labels" : timeStamps,
+            "Values": list_y
+        };
+
+
+        // Draw chart
+        const ctx = document.querySelector('#myChart').getContext('2d'); // Specify the chart canvas element
+        const myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: sample_data.Labels,
+                datasets: [{
+                    label: 'Concentration Values',
+                    data: sample_data.Values,
+                    lineTension: 50,
+                    borderColor: 'rgb(24,222,186)',
+                    backgroundColor: 'rgba(25,201,136,0.3)',
+                    fill: true
+                }]
+            }
+        });
+    </script>
+
+    <!-- Legend Container -->
+    <div id="legend-container"></div>
+</body>
+
+<body>
+
+<div class="box">
+    <h2 class="poppins-semibold">
+
+
+        <center> Statistics: </center> <br>
+
+        Avg Time Focused:
+
+        <br><br>
+
+        Avg Time Distracted:
+
+
+    </h2>
+</div>
+
+</body>
+
+</html>
