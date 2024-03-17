@@ -1,4 +1,6 @@
 # neurotech-hack2024
+
+**2nd Place Winner | Neurotech@Berkeley Hackathon 2024**
  
 SimpleFlow
 
